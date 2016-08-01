@@ -1,0 +1,31 @@
+
+5)
+Task: Select the model name, brand name, and headquarters for 
+the Ford Mustang from the models and brands tables.
+
+The result set should be:
+  name   | brand_name | headquarters
+---------+------------+--------------
+ Mustang | Ford       | Dearborn, MI
+
+ select name.models,brand_name.models, headquarters.models FROM models, brands WHERE models.brand_name = 'Ford', brands.name = 'Mustang';
+
+
+6) Task: Count the Ford models in the database The output should be a number. 
+
+SELECT * FROM models WHERE brand_name = 'Ford';
+
+7) Task: Select the name of any and all car brands that are not 
+discontinued.
+
+SELECT name FROM models, brands WHERE discontinued IS NOT NULL;
+
+8) Task: Select everything from rows 15-24 of the models table in 
+alphabetical order by name. The result set should have 10 records.
+
+SELECT * FROM models WHERE 	ROWNUM >= 15 AND
+ROWNUM <= 24 GROUP BY
+
+
+
+
